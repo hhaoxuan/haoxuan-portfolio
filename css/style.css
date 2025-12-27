@@ -1,0 +1,251 @@
+/* Preset */
+:root {
+  --bg: #ffffff;       /* pure white */
+  --bg2: #f4f4f4;      /* light gray section bg */
+  --text: #181818;     /* softer than pure black */
+  --text-light: #4a4a4a;
+
+  --accent1: #E97451;  /* Burnt Sienna */
+  --accent2: #F2C335;  /* Saffron */
+
+  --radius: 6px;
+  --trans: .25s;
+}
+
+/* Smooth scrolling WHO? */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom font meant to embed BBH Hegarty */
+@font-face {
+    font-family: 'BBH Hegarty';
+    src: url('../fonts/BBHHegarty-Regular.woff2') format('woff2'),
+        url('../fonts/BBHHegarty-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Custom font meant to embed Fjalla One */
+@font-face {
+    font-family: 'Fjalla One';
+    src: url('../fonts/FjallaOne-Regular.woff2') format('woff2'),
+        url('../fonts/FjallaOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Lato family */
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Nav bar */
+nav {
+    display: flex;
+    justify-content:space-between;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    gap: 50px;
+    margin: 13px 30px 20px 0;
+    justify-content: flex-end;
+}
+nav h1 {
+    margin: 0 0 0 30px;
+    font-family: 'BBH Hegarty', sans-serif;
+    justify-content: flex-start;
+    font-weight:lighter;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    color: var(--accent1);
+}
+nav h1:hover {
+    color: var(--accent2);
+}
+nav a {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    background-color: var(--bg2);
+    border-radius: 2px;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    width: 99vw;
+}
+.hero a {
+    text-decoration: none;
+    color: var(--bg);
+}
+.heroText {
+    margin: 210px 0 0 30px;
+}
+.heroText h1 {
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 0.02em;
+    font-size: 45px;
+    font-weight: bold;
+}
+.heroText p{
+    color: var(--text-light);
+    font-weight: bolder;
+}
+.buttonList {
+    display: flex;
+    gap: 30px;
+}
+.buttonList button {
+    margin-top:10px;
+    padding: 10px;
+    border-radius: var(--radius);
+    border:none;
+    font-weight: bolder;
+    background-color: var(--accent1);
+    text-align: center;
+    transition: tranform 0.3s ease;
+}
+.hero button:hover {
+    background-color: var(--accent2);
+    transform: scale(1.05);
+}
+.chessboard {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0; 
+    padding: 0;
+}
+
+/* About Me Section */
+.aboutMe article {
+    display: flex;
+    justify-content: space-between;
+}
+.mainText {
+    justify-content: flex-end;
+    margin: 30px 85px 0 0;
+}
+.mainText h3 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 35px;
+    letter-spacing: 0.02em;
+    margin: 0 0 20px 0;
+}
+.mainText p {
+    color: var(--text-light);
+    font-weight: bold;
+    line-height: 1.7;
+}
+.image img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 13px;
+  margin: 0 0 0 80px;
+  transition: transform 0.4s ease;
+  box-shadow: 3px 3px 5px 1px rgb(37, 37, 37);
+}
+.image img:hover {
+    transform: scale(1.03);
+}
+.quote {
+    margin: 20px 0 20px 20px;
+    font-weight: bolder;
+    font-size:20px;
+    padding-left: 20px;
+    border-left: 5px solid var(--accent1);
+    color: var(--text);
+}
+
+/* Quote Section */
+.quoteSection h2{
+    display: flex;
+    background-color:var(--bg);
+    font-size: 75px;
+    justify-content: center;
+    margin-top: 100px;
+}
+.quoteSection q {
+    padding-bottom: 10px;
+    border-bottom: 10px solid var(--accent2);
+    letter-spacing: 0.03em;
+}
+.attribution {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    margin-bottom: 100px;
+}
+.quoteSection img {
+    border-radius: var(--radius);
+    margin-right: 10px;
+}
+.attributionText h3 {
+    color: var(--text);
+    font-family: "Latos", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 5px 0 0 0;
+}
+.attributionText p {
+    color: var(--text-light);
+    margin: 10px 0 0 1px;
+}
+
+/* Element exclusive */
+h2 {
+    display: inline-block;
+    font-family: "BBh Hegarty", sans-serif;
+    margin: 40px 0 40px 30px;
+    font-weight: lighter;
+    font-size: 45px;
+    background-color: var(--accent1);
+}
+p {
+    font-family: "Lato", sans-serif;
+}
+
+/* Class customization */
+.yt {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+.tci{
+    color: rgb(28, 63, 139);
+    font-weight: bold;
+}
+.ytList {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+}
+.tciPosters img {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border: 3px solid rgb(28, 63, 139);
+}
+
+/* BG color */
+body {
+    background-color: var(--bg);
+    overflow-x: hidden;
+}
