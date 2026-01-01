@@ -1,3 +1,8 @@
+/* Margins to 0 */
+body {
+    margin: 0;
+}
+
 /* Preset */
 :root {
   --bg: #ffffff;       /* pure white */
@@ -50,6 +55,13 @@ html {
 }
 
 /* Nav bar */
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    width: 99vw;
+}
 nav {
     display: flex;
     justify-content:space-between;
@@ -70,6 +82,7 @@ nav h1 {
     font-size: 40px;
     letter-spacing: 0.02em;
     color: var(--accent1);
+    transition: all 0.5s ease;
 }
 nav h1:hover {
     color: var(--accent2);
@@ -80,16 +93,19 @@ nav a {
     color: var(--text);
     font-size: 15px;
     font-weight: bold;
+    transition: all 0.5s ease;
 }
 nav a:hover {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 /* Hero section */
+#hero {
+    scroll-margin-top: 300px;
+}
 .hero {
     display: flex;
     justify-content: space-between;
-    width: 99vw;
 }
 .hero a {
     text-decoration: none;
@@ -129,11 +145,14 @@ nav a:hover {
 .chessboard {
     display: flex;
     justify-content: flex-end;
-    margin: 0 0 50px 0; 
+    margin: 0 0 100px 0; 
     padding: 0;
 }
 
 /* About Me Section */
+#aboutMe {
+    scroll-margin-top: 100px;
+}
 .aboutMe article {
     display: flex;
     justify-content: space-between;
@@ -175,12 +194,15 @@ nav a:hover {
 }
 
 /* Quote Section */
+#quoteSection {
+    scroll-margin-top: 140px;
+}
 .quoteSection h2{
     display: flex;
     background-color:var(--bg);
     font-size: 75px;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 150px;
 }
 .quoteSection q {
     padding-bottom: 10px;
@@ -206,29 +228,60 @@ nav a:hover {
 }
 .attributionText p {
     color: var(--text-light);
-    margin: 10px 0 0 1px;
+    margin: 10px 0 700px 1px;
+}
+
+/* So I Did Section */
+#attentionGrabber {
+    scroll-margin-top: 320px;
+}
+.attentionGrabber {
+    display: block;
+    background-color: var(--text);
+    text-align: center;
+    margin: 0 0 300px 0;
+}
+.attentionGrabber h2 {
+    color: var(--bg);
+    background-color: var(--text);
+    font-size: 70px;
+    letter-spacing: 0.03em;
 }
 
 /* Project Section */
-.projects{
+#projects{
+    scroll-margin-top: 90px;
+}
+.content {
     display: flex;
+    position: relative;
     justify-content: center;
 }
 .projecth2{
     display: block;
+    margin: 0 0 25px 0;
+}
+.projectNote {
+  position: absolute;              
+  top: -95px;                
+  left: 61%;                  
+  width: 170px;                   
+  pointer-events: none;
+  transform: rotate(10deg);
 }
 .projecth2 h2 {
     background-color: var(--accent2);
 }
-.yt img, .tci img, .website img{
+.yt img, .tci img, .website img {
     max-width: 325px;
     width: 100%;
     height: auto;
+    transition: all 0.7s ease;
 }
 .yt {
     display: inline-block;
     text-align: center;
-    margin: 0 100px 0 55px;
+    margin: 0 100px 0 65px;
 }
 .tci {
     display: inline-block;
@@ -245,25 +298,124 @@ nav a:hover {
     transform: translateY(-30px);
     transition: all 1s ease;
 }
-.ytText h3, .tciText h3, .webText h3{
+.ytText h3, .tciText h3, .webText h3 {
     font-family: "Fjalla One", sans-serif;
     letter-spacing: 0.03em;
     font-size: 30px;
     margin: 10px 0 10px 0;
 }
-.ytText a, .tciText a, .webText a{
+.ytText a, .tciText a, .webText a {
     text-decoration: none;
     color: var(--accent2);
 }
-.ytText p, .tciText p, .webText p{
+.ytText p, .tciText p, .webText p {
     font-weight: bold;
     color: var(--text-light);
     font-size: 15px;
     line-height: 1.3;
 }
-.yt:hover .ytText, .tci:hover .tciText, .website:hover .webText{
+.yt:hover .ytText, .tci:hover .tciText, .website:hover .webText {
     opacity: 1;
     transform: translateY(0px);
+}
+.yt:hover img, .tci:hover img, .website:hover img {
+    filter: brightness(0.9);
+}
+
+/* Contact Me Section */
+#contactMe {
+  scroll-margin-top: 150px;
+}
+.contactMe h2 {
+    margin-bottom: 0;
+}
+.contactForm {
+    margin: 0 0 0 30px;
+}
+.contactForm h3 {
+    font-family: "BBH Hegarty", sans-serif;
+    color: var(--accent1); 
+    letter-spacing: 0.02em;
+    font-weight: lighter;
+    margin: 20px 0 10px 0;
+    font-size: 21px;
+}
+.contactForm button {
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: "Latos", sans-serif;
+    font-weight: bolder;
+    color: var(--bg);
+    background-color: var(--accent1);
+    padding: 7px 294px 7px 294px;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+    margin-bottom: 50px;
+    letter-spacing: 0.04em;
+}
+.contactForm button:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 15px var(--accent2);
+}
+.contactForm input {
+    border: 3px solid var(--accent1);
+    border-radius: var(--radius);
+    height: 25px;
+    width: 650px;
+    outline: none;
+    font-family: "Latos", sans-serif;
+    font-weight: bold;
+    color: var(--text);
+}
+.contactForm .message {
+    height: 50px;
+    border: 3px solid var(--accent1);
+    border-radius: var(--radius);
+    width: 650px;
+    outline: none;
+    font-family: "Latos", sans-serif;
+    font-weight: bold;
+    color: var(--text);
+    resize: none;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    gap: 255px;
+    margin-bottom: 50px;
+}
+footer h3 {
+    font-family: "BBH Hegarty", sans-serif;
+    letter-spacing: 0.04em;
+    color: var(--accent1);
+    font-size: 25px;
+}
+.copyright {
+    margin-left: 100px;
+}
+.footerNav, .links{
+    list-style: none;
+    line-height: 1.4;
+}
+.footerNav h3 {
+    color: var(--accent2);
+}
+.footerNav a, .links a, .copyright p{
+    text-decoration: none;
+    font-family: "Latos", sans-serif;
+    color: var(--text-light);
+    font-weight: bold;
+}
+.links {
+    margin-right: 100px;
+}
+footer a {
+    transition: all 0.5s ease;
+}
+footer a:hover {
+    opacity: 0.5;
 }
 
 /* Element exclusive */
@@ -278,8 +430,14 @@ h2 {
 p {
     font-family: "Lato", sans-serif;
 }
+hr {
+    margin: 50px 0 50px 70px;
+    border: none;
+    height: 7px;
+    background-color: var(--accent1);
+    width: 90%
+}
 
-/* Class customization */
 /* BG color */
 body {
     background-color: var(--bg);

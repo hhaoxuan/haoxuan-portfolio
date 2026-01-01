@@ -7,126 +7,181 @@
      <link rel ="stylesheet" href = "./css/style.css">
 </head>
 <body>
+    <section class = "navigation">
     <nav>
-        <header> <h1 class>Haoxuan's Portfolio</h1> </header>
+        <header><h1>Haoxuan's Portfolio</h1></header>
         <ul>
-        <li><a href = "#aboutMe">About</a></li>
-        <li><a href = "#projects">Projects</a></li>
-        <li><a href = "#contactMe">Contact</a></li>
+            <li><a href = "#aboutMe">About</a></li>
+            <li><a href = "#projects">Projects</a></li>
+            <li><a href = "#contactMe">Contact</a></li>
         </ul>
     </nav>
+    </section>
     <main>
     
     <!-- Hero Section -->
+    <div id = "hero">
      <section class = "hero">
         <article class = "heroText">
-        <h1> Your average student, <br> but a not-so average site </h1>
-        <p> It's below average, this site was put together via basic html and prayers. </p>
-        <div class = "buttonList">
-        <button> <a href = "#contactMe">Contact Me</a></button>
-        <button> <a href = "#projects">Projects</a></button>
-        </div>
+            <h1> Your average student, <br> but a not-so average site </h1>
+            <p> It's below average, this site was put together via basic html and prayers. </p>
+            <div class = "buttonList">
+                <button> <a href = "#contactMe">Contact Me</a></button>
+                <button> <a href = "#projects">Projects</a></button>
+            </div>
         </article>
         <div class = "chessboard">
-        <img src = "images/burnt chess board.png" width="760px" height="760px" alt = "chess board graphic">
+            <img src = "images/burnt chess board.png" width="765px" height="765px" alt = "chess board graphic">
         </div>
      </section>
+    </div>
 
     <!-- About Me Section -->
-    <h2>About Me</h2>
-    <section class = "aboutMe">
-        <article>
-            <div class = "image">
-                <img src = "images/me round 2 better.webp" alt = "an image of me">
-            </div>
-            <div class = "mainText">
-                <h3> Introduction </h3>
-                <p> 
-                    Hello, I'm Haoxuan.  I'm a high school student who loves building things <br>
-                    until people go,
-                    <br> <br>
-                    <q class = "quote">Oh, that's kind of good.</q> <br>
-                    <br>
-                    My projects span vastly from design to editing.  I currently am operating <br>
-                    a YouTube channel, chess organization, and learning web development in the<br>
-                    background. I don't hesitate to jump into anything.  Like Branson said...<br>
-                    <br>
-                    <span style = "font-style: italic;">P.S. I learnt html, css, and built this site 
-                    during winter break.</span>
-                </p>
-            </div>
-        </article>
-    </section>
-
-    <!-- Quote -->
-    <section class = "quoteSection">
-        <h2><q> Screw it, let's do it. </q></h2>
-        <article class = "attribution">
-            <img src = "images/richard.webp" width = "60" height = "60" alt = "richard branson">
-            <div class = "attributionText">
-            <h3> Richard Branson </h3>
-            <p> Business Magnate </p>
+    <section id = "aboutMe">
+        <h2>About Me</h2>
+        <div class = "aboutMe">
+            <article>
+                <div class = "image">
+                    <img src = "images/me round 2 better.webp" alt = "an image of me">
+                </div>
+                <div class = "mainText">
+                    <h3> Introduction </h3>
+                    <p> 
+                        Hello, I'm Haoxuan.  I'm a high school student who loves building things <br>
+                        until people go,
+                        <br> <br>
+                        <q class = "quote">Oh, that's kind of good.</q> <br>
+                        <br>
+                        My projects span vastly from design to editing.  I currently am operating <br>
+                        a YouTube channel, chess organization, and learning web development in the<br>
+                        background. I don't hesitate to jump into anything.  Like Branson said...<br>
+                        <br>
+                        <span style = "font-style: italic;">P.S. I learnt html, css, and built this site 
+                        during winter break.</span>
+                    </p>
+                </div>
             </article>
         </div>
     </section>
 
+    <!-- Quote -->
+    <div id = "quoteSection">
+        <section class = "quoteSection">
+            <h2><q> Screw it, let's do it. </q></h2>
+            <article class = "attribution">
+                <img src = "images/richard.webp" width = "60" height = "60" alt = "richard branson">
+                <div class = "attributionText">
+                <h3> Richard Branson </h3>
+                <p> Business Magnate </p>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <!-- So I did -->
+    <div id = "attentionGrabber">
+        <scan class = "attentionGrabber"><h2>...So I Did</h2></scan>
+    </div>
+
+    <!-- CHANGE INTO VENTURES -->
     <!-- Projects Section -->
     <section id = "projects">
-    <scan class = "projecth2"><h2> ...So I Did </h2></scan>
-    <article class = "yt">
-        <img src = "images/gappy.png" alt = "YouTube Logo">
-        <div class = "ytText">
-            <h3> <a href = "https://www.youtube.com/@Hao_OverHeaven" target = "_blank" 
-                rel="noopener noreferrer">YouTube</a></h3>
-            <p>
-                I run a Roblox YouTube channel where <br>
-                I upload long and short-form content. <br>
-                This channel has been a long-term passion <br> 
-                project of mine, one where I first learned <br>
-                how to creatively express myself.  It has <br>
-                generated 2.3 million overall views (Dec 2025).
-            </p>
+        <scan class = "projecth2"> <h2>Projects</h2> </scan>
+        <div class = "content">
+        <img src = "images/note last i think.png" class = "projectNote" alt = "note">
+        <article class = "yt">
+            <img src = "images/gappy.png" alt = "YouTube Logo">
+            <div class = "ytText">
+                <h3> <a href = "https://www.youtube.com/@Hao_OverHeaven" target = "_blank" 
+                    rel="noopener noreferrer">YouTube</a></h3>
+                <p>
+                    I run a Roblox YouTube channel where <br>
+                    I upload long and short-form content. <br>
+                    This channel has been a long-term passion <br> 
+                    project of mine, one where I first learned <br>
+                    how to creatively express myself.  It has <br>
+                    generated 2.3 million overall views (Dec 2025).
+                </p>
+            </div>
+        </article>
+        <article class = "tci">
+            <img src = "images/TCI Logo optimized.png" alt = "TCI Logo">
+            <div class = "tciText">
+                <h3> <a href = "https://www.instagram.com/thesgvchessinitiative/" target = "_blank" 
+                    rel="noopener noreferrer"> The Chess Initiative</a></h3>
+                <p>
+                    I founded The Chess Initiative early 2025 <br>
+                    to actualize my dream of spreading chess <br>
+                    around SGV.  This community centered venture <br>
+                    drastically improved my technical design <br>
+                    skills, leadership, organization, along <br>
+                    with time management.
+                </p>
+            </div>
+        </article>
+        <article class = "website">
+            <img src = "images/chess board circle.png" alt = "Website Logo">
+            <div class = "webText">
+                <h3><a href = "#hero">Web Development</a></h3>
+                <p>
+                    With this site as my first real project, <br>
+                    I'm learning front-end web development <br>
+                    one div at a time through html, css, and <br>
+                    some js. This website encompasses my <br>
+                    portfolio, and whatever else I want to <br>
+                    throw here.
+                </p>
+            </div>
+        </article>
         </div>
-    </article>
-    <article class = "tci">
-        <img src = "images/TCI Logo optimized.png" alt = "TCI Logo">
-        <div class = "tciText">
-            <h3> <a href = "https://www.instagram.com/thesgvchessinitiative/" target = "_blank" 
-                rel="noopener noreferrer"> The Chess Initiative</a></h3>
-            <p>
-                I founded The Chess Initiative early 2025 <br>
-                to actualize my dream of spreading chess <br>
-                around SGV.  This community centered venture <br>
-                drastically improved my technical design <br>
-                skills, leadership, organization, along <br>
-                with time management.
-            </p>
-        </div>
-    </article>
-    <article class = "website">
-        <img src = "images/chess board circle.png" alt = "Website Logo">
-        <div class = "webText">
-            <h3><a href = "#hero">Web Development</a></h3>
-            <p>
-                With this site as my first real project, <br>
-                I'm learning front-end web development <br>
-                one div at a time through html, css, and <br>
-                some js. This website encompasses my <br>
-                portfolio, and whatever else I want to <br>
-                throw here.
-            </p>
-        </div>
-    </article>
     </section>
 
+    <!-- ADD PROJECTS SECTION -->
     <!-- Contact Me Section -->
+    <hr>
     <section id = "contactMe">
         <h2> Contact Me </h2>
-        <p> I'm available anytime! </p>
-        <p> placeholder </p>
+        <form class = "contactForm" action="https://formspree.io/f/xykynrrw" method="POST">
+            <h3>Email</h3>
+            <input type = "email" name = "email" required>
+            <h3>Subject</h3>
+            <input type = "subject" name = "subject" required>
+            <h3>Message</h3>
+            <textarea type = "message" rows = "2" class = "message" name = "message" required> </textarea> <br>
+            <button type = "submit">Submit</button>
+        </form>
     </section>
+    <hr>
+
+    <!-- Footer -->
     <footer>
-        <p> est 2025 hh productions lmao </p>
+        <div class = "copyright">
+            <h3>Copyright</h3>
+            <p>© 2025 Haoxuan — Portfolio</p>
+            <p>Made at 1am off of pure determination</p>
+            <p>(Here's where you pretend this is a proper footer)</p>
+        </div>
+        <ul class = "footerNav">
+            <!--AFTER CHANGING VENTURES, MAKE SURE TO UPDATE HERE-->
+            <li><h3>Navigation</h3></li>
+            <li><a href = "#hero">Hero</a></li>
+            <li><a href = "#aboutMe">About</a></li>
+            <li><a href = "#quoteSection">Quote</a></li>
+            <li><a href = "#attentionGrabber">So I Did</a></li>
+            <li><a href = "#projects">Projects</a></li>
+            <li><a href = "#contactMe">Contact</a></li>
+        </ul>
+        <ul class = "links">
+            <li><h3>Links</h3></li>
+            <li><a href = "https://www.youtube.com/@Hao_OverHeaven" target = "_blank" 
+                rel="noopener noreferrer">YouTube</a></li>
+            <li><a href = "https://www.instagram.com/thesgvchessinitiative/" target = "_blank" 
+                rel="noopener noreferrer">TCI</a></li>
+            <li><a href = "https://github.com/hhaoxuan" target = "_blank" 
+                rel="noopener noreferrer">GitHub</a></li>
+            <li><a href = "https://www.linkedin.com/in/huang-haoxuan/" target = "_blank" 
+                rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
     </footer>
 </body>
 </html>
