@@ -5,34 +5,48 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Haoxuan Portfolio</title>
      <link rel ="stylesheet" href = "./css/style.css">
+     <link rel="icon" href = "images/favicon.png" image-type="images/png">
 </head>
 <body>
-    <section class = "navigation">
-    <nav>
+    <!-- Desktop nav bar -->
+    <section class = "navigation" aria-label = "Main Navgiation For Desktop">
+    <nav class = "headerNav">
         <header><h1>Haoxuan's Portfolio</h1></header>
         <ul>
             <li><a href = "#aboutMe">About</a></li>
-            <li><a href = "#projects">Projects</a></li>
+            <li><a href = "#ventures">Ventures</a></li>
+            <li><a href = "#works">Works</a></li>
             <li><a href = "#contactMe">Contact</a></li>
         </ul>
+    <!-- Mobile nav bar -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <nav class = "mobileNav" aria-label = "Main Navgiation For Mobile">
+            <ul>
+                <li><a href = "#aboutMe">About</a></li>
+                <li><a href = "#ventures">Ventures</a></li>
+                <li><a href = "#works">Works</a></li>
+                <li><a href = "#contactMe">Contact</a></li>
+            </ul>
+        </nav>
     </nav>
     </section>
     <main>
-    
+
     <!-- Hero Section -->
     <div id = "hero">
      <section class = "hero">
+        <div class = "chessboard">
+            <img src = "images/burnt chess board.png" alt = "orange chess board graphic">
+        </div>
         <article class = "heroText">
-            <h1> Your average student, <br> but a not-so average site </h1>
+            <h1> Your average student, <br> but a <div class = "notSo">not-so</div> average site </h1>
             <p> It's below average, this site was put together via basic html and prayers. </p>
-            <div class = "buttonList">
+            <div class = "buttonList" aria-label = "Call to Action Buttons">
                 <button> <a href = "#contactMe">Contact Me</a></button>
-                <button> <a href = "#projects">Projects</a></button>
+                <button> <a href = "#works">Works</a></button>
             </div>
         </article>
-        <div class = "chessboard">
-            <img src = "images/burnt chess board.png" width="765px" height="765px" alt = "chess board graphic">
-        </div>
      </section>
     </div>
 
@@ -63,13 +77,14 @@
             </article>
         </div>
     </section>
+    </main>
 
     <!-- Quote -->
     <div id = "quoteSection">
         <section class = "quoteSection">
             <h2><q> Screw it, let's do it. </q></h2>
             <article class = "attribution">
-                <img src = "images/richard.webp" width = "60" height = "60" alt = "richard branson">
+                <img src = "images/richard.webp" alt = "richard branson">
                 <div class = "attributionText">
                 <h3> Richard Branson </h3>
                 <p> Business Magnate </p>
@@ -83,12 +98,11 @@
         <scan class = "attentionGrabber"><h2>...So I Did</h2></scan>
     </div>
 
-    <!-- CHANGE INTO VENTURES -->
-    <!-- Projects Section -->
-    <section id = "projects">
-        <scan class = "projecth2"> <h2>Projects</h2> </scan>
+    <!-- Ventures Section -->
+    <section id = "ventures">
+        <scan class = "venturesh2"> <h2>Ventures</h2> </scan>
         <div class = "content">
-        <img src = "images/note last i think.png" class = "projectNote" alt = "note">
+        <img src = "images/note last i think.png" class = "venturesNote" alt = "note">
         <article class = "yt">
             <img src = "images/gappy.png" alt = "YouTube Logo">
             <div class = "ytText">
@@ -136,19 +150,51 @@
         </div>
     </section>
 
-    <!-- ADD PROJECTS SECTION -->
+    <!-- Works Section -->
+    <section id = "works">
+        <span class = "yellowYay"><h2>Works</h2></span>
+        <section class = "works">
+            <div class = "left">
+                <div class = "leftTop">
+                    <img src = "images/January Tournament Poster smaller.png" alt = "january tournament poster">
+                </div>
+                <div class = "leftBottom">
+                    <img src = "images/Thanksgiving Tournament Poster smaller.png" alt = "thanksgiving tournament poster">
+                </div>
+            </div>
+            <div class = "center">
+                <img src = "images/Thanksgiving Tourney Story smaller.png" alt = "thanksgiving tourney story">
+            </div>
+            <div class = "right">
+                <div class = "rightTop">
+                    <img src = "images/TCI New Years smaller.png" alt = "new year poster">
+                </div>
+                <div class = "rightText">
+                    <h3>TCI Projects</h3>
+                    <scan class = "rightQuote"><p>What's the point of making something<br>
+                        pretty if no-one else sees it?</p></scan>
+                    <p>I started making designs on a whim, sometime<br>around August 2025. 
+                    From then, I've established<br>brand colors and elements for TCI, and remain
+                    <br>a lead graphic designer for the organization.<br>My design style is inspired from
+                    modernism,<br>however I commonly experiment with other<br>styles and try to add
+                    stylistic choices from other<br>styles into my designs.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    
     <!-- Contact Me Section -->
     <hr>
     <section id = "contactMe">
         <h2> Contact Me </h2>
         <form class = "contactForm" action="https://formspree.io/f/xykynrrw" method="POST">
             <h3>Email</h3>
-            <input type = "email" name = "email" required>
+            <input type = "email" name = "email" required autocomplete="email">
             <h3>Subject</h3>
             <input type = "subject" name = "subject" required>
             <h3>Message</h3>
             <textarea type = "message" rows = "2" class = "message" name = "message" required> </textarea> <br>
-            <button type = "submit">Submit</button>
+            <button type = "submit" aria-label = "Submit Your Message">Submit</button>
         </form>
     </section>
     <hr>
@@ -162,13 +208,13 @@
             <p>(Here's where you pretend this is a proper footer)</p>
         </div>
         <ul class = "footerNav">
-            <!--AFTER CHANGING VENTURES, MAKE SURE TO UPDATE HERE-->
             <li><h3>Navigation</h3></li>
             <li><a href = "#hero">Hero</a></li>
             <li><a href = "#aboutMe">About</a></li>
             <li><a href = "#quoteSection">Quote</a></li>
             <li><a href = "#attentionGrabber">So I Did</a></li>
-            <li><a href = "#projects">Projects</a></li>
+            <li><a href = "#ventures">Ventures</a></li>
+            <li><a href = "#works">Works</a></li>
             <li><a href = "#contactMe">Contact</a></li>
         </ul>
         <ul class = "links">
@@ -179,7 +225,7 @@
                 rel="noopener noreferrer">TCI</a></li>
             <li><a href = "https://github.com/hhaoxuan" target = "_blank" 
                 rel="noopener noreferrer">GitHub</a></li>
-            <li><a href = "https://www.linkedin.com/in/huang-haoxuan/" target = "_blank" 
+            <li><a href = "https://www.linkedin.com/in/huang-haoxuan" target = "_blank" 
                 rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
     </footer>
