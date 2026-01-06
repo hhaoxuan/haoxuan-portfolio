@@ -57,8 +57,9 @@ body {
     top: 0;
     z-index: 10;
     background: var(--bg);
-    max-width: 99vw;
+    max-width: 100vw;
     opacity: 97%;
+    box-sizing: border-box;
 }
 .headerNav {
     display: flex;
@@ -119,18 +120,19 @@ body {
     color: var(--bg);
     font-weight: bold;
     transition: all 0.3s ease;
-    margin-right: 0.5rem;
+    padding-right: 0.5rem;
 }
 .mobileNav {
   display: none;
   position: fixed;
-  top: 10;
+  top: 2.5rem;
   right: 0;
   background: var(--text);
-  height: 100vh;
-  width: 30vw;
+  height: 100dvh;
+  width: 50vw;
   padding: 1.75rem;
-  margin-top: 2.5rem;
+  box-sizing: border-box;
+  z-index: 20;
 }
 #menu-toggle:checked + .hamburger + .mobileNav {
   display: block;
@@ -286,6 +288,8 @@ body {
         margin: 0;
         width: 90%;
         height: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .aboutMe .mainText {
         display: block;
@@ -381,7 +385,7 @@ body {
   position: absolute;    
   top: -5.9375rem;          
   left: 61%;                
-  width: 10.625rem;                   
+  width: clamp(3rem, 10vw + 2rem, 11rem);
   pointer-events: none;
   transform: rotate(10deg);
 }
@@ -454,6 +458,7 @@ body {
     .venturesNote {
         top: -9.5rem;          
         left: 65%;
+        width: 9rem;
     }
 }
 
@@ -498,20 +503,27 @@ body {
 .right {
     grid-column: 3;
     grid-row: 1;
+    position: relative;
 }
 .rightText h3 {
     font-family: 'BBH Hegarty', sans-serif;
     letter-spacing: 0.02em;
     font-size: 3.55rem;
-    margin: 0;
+    margin: 0 1rem 0 1rem;
     background: linear-gradient(45deg,var(--accent2),var(--accent1));
     background-clip: text;
     color: transparent;
+    text-align: center;
 }
 .rightText p {
     color: var(--text-light);
     font-weight: bolder;
     line-height: 1.7;
+    margin: 0 1rem 0 1rem;
+}
+.rightText {
+    justify-self: center;
+    align-self: center;
 }
 .rightQuote p{
     font-family: "BBH Hegarty", sans-serif;
@@ -529,9 +541,10 @@ body {
     }
     .leftTop img, .leftBottom img, .center img, .rightTop img {
         display: block;
-        width: 90%;
+        max-width: 90%;
         margin: 0 auto 3.75rem auto;
     }
+
 }
 
 /* Contact Me Section */
