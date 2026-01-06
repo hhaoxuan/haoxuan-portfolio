@@ -120,12 +120,12 @@ body {
     color: var(--bg);
     font-weight: bold;
     transition: all 0.3s ease;
-    padding-right: 0.5rem;
+    padding-right: 1.5rem;
 }
 .mobileNav {
   display: none;
   position: fixed;
-  top: 2.5rem;
+  top: 3rem;
   right: 0;
   background: var(--text);
   height: 100dvh;
@@ -458,7 +458,7 @@ body {
     .venturesNote {
         top: -9.5rem;          
         left: 65%;
-        width: 9rem;
+        width: 8.25rem;
     }
 }
 
