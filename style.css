@@ -27,8 +27,8 @@ body {
 /* Custom font meant to embed BBH Hegarty */
 @font-face {
     font-family: 'BBH Hegarty';
-    src: url('../fonts/BBHHegarty-Regular.woff2') format('woff2'),
-        url('../fonts/BBHHegarty-Regular.woff') format('woff');
+    src: url('fonts/BBHHegarty-Regular.woff2') format('woff2'),
+        url('fonts/BBHHegarty-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -37,8 +37,8 @@ body {
 /* Custom font meant to embed Fjalla One */
 @font-face {
     font-family: 'Fjalla One';
-    src: url('../fonts/FjallaOne-Regular.woff2') format('woff2'),
-        url('../fonts/FjallaOne-Regular.woff') format('woff');
+    src: url('fonts/FjallaOne-Regular.woff2') format('woff2'),
+        url('fonts/FjallaOne-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -140,15 +140,6 @@ body {
 .mobileNav a:hover {
     opacity: 50%;
 }
-@media (max-width: 925px) {
-    .headerNav > ul {
-        display: none;
-    }
-    .hamburger {
-        display: block;
-        margin-left: auto;
-    }
-}
 
 /* Hero section */
 #hero {
@@ -215,25 +206,6 @@ body {
     width: 47.8125rem;
     height: auto;
 }
-@media (max-width: 576px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
-    }
-    .chessboard {
-        order: 1;
-        max-width: 100%;
-        max-height: auto;
-        margin: 0;
-        display: block;
-    }
-    .heroText {
-        align-items: center;
-        order: 2;
-        margin: 1rem 0 10rem 1rem;
-    }
-}
 
 /* About Me Section */
 #aboutMe {
@@ -245,7 +217,7 @@ body {
 }
 .mainText {
     justify-content: flex-end;
-    margin: 1.875rem 5.3125rem 0 0;
+    margin: 1.875rem 3rem 0 3rem;
 }
 .mainText h3 {
     font-family: "Fjalla One", sans-serif;
@@ -261,7 +233,7 @@ body {
 .image img {
   max-width: 37.5rem;
   height: auto;
-  border-radius: 13px;
+  border-radius: 1rem;
   margin: 0 0 0 5rem;
   transition: transform 0.4s ease;
   box-shadow: 3px 3px 5px 1px rgb(37, 37, 37);
@@ -277,25 +249,6 @@ body {
     padding-left: 1.25rem;
     border-left: 5px solid var(--accent1);
     color: var(--text);
-}
-@media (max-width: 576px) {
-    .aboutMe article {
-        flex-direction: column;
-    }
-    .image img {
-        display: block;
-        justify-self: center;
-        margin: 0;
-        width: 90%;
-        height: auto;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .aboutMe .mainText {
-        display: block;
-        align-self: center;
-        margin: 2rem 1rem 2rem 1rem;
-    }
 }
 
 /* Quote Section */
@@ -339,14 +292,6 @@ body {
 .attributionText p {
     color: var(--text-light);
     margin: 0.7rem 0 43.75rem 0.0625rem;
-}
-@media (max-width: 576px) {
-    .quoteSection {
-        flex-direction: column;
-    }
-    .attribution {
-        margin: 0;
-    }
 }
 
 /* So I Did Section */
@@ -442,25 +387,6 @@ body {
 .yt:hover img, .tci:hover img, .website:hover img {
     filter: brightness(0.9);
 }
-@media (max-width: 576px) {
-    .content {
-        flex-direction: column;
-    }
-    .yt {
-        margin:0 0 2rem 0;
-    }
-    .tci {
-        margin:0 0 2rem 0;
-    }
-    .website {
-        margin:0 0 2rem 0;
-    }
-    .venturesNote {
-        top: -9.5rem;          
-        left: 65%;
-        width: 8.25rem;
-    }
-}
 
 /*Works Section*/
 .works{
@@ -472,6 +398,13 @@ body {
 .yellowYay h2{
     background-color: var(--accent2);
     margin-top: 5rem;
+}
+.works img {
+    transition: transform 0.4s ease;
+    margin: 0;
+}
+.works img:hover {
+    transform: scale(1.03);
 }
 .leftTop img, .leftBottom img, .rightTop img {
     max-width: 25rem;
@@ -503,17 +436,21 @@ body {
 .right {
     grid-column: 3;
     grid-row: 1;
-    position: relative;
 }
 .rightText h3 {
     font-family: 'BBH Hegarty', sans-serif;
     letter-spacing: 0.02em;
-    font-size: 3.55rem;
+    font-size: 3.1rem;
     margin: 0 1rem 0 1rem;
     background: linear-gradient(45deg,var(--accent2),var(--accent1));
     background-clip: text;
     color: transparent;
     text-align: center;
+    transition: all 0.4s ease;
+}
+.rightText h3:hover {
+    transform: scale(1.03);
+    opacity: 85%;
 }
 .rightText p {
     color: var(--text-light);
@@ -533,18 +470,6 @@ body {
     padding-left: 0.5rem;
     border-left: 5px solid var(--accent2);
     color: var(--text);
-}
-@media (max-width: 576px) {
-    .works {
-        flex-direction: column;
-        display: block;
-    }
-    .leftTop img, .leftBottom img, .center img, .rightTop img {
-        display: block;
-        max-width: 90%;
-        margin: 0 auto 3.75rem auto;
-    }
-
 }
 
 /* Contact Me Section */
@@ -605,7 +530,7 @@ body {
 }
 
 /* Footer */
-footer {
+#footerElement {
     display: flex;
     gap: clamp(5rem, 10vw + 2rem, 19rem);
     margin-bottom: 3.125rem;
@@ -634,22 +559,13 @@ footer h3 {
     font-weight: bold;
 }
 .links {
-    margin-right: 6.25rem;
+    margin-right: 2rem;
 }
 footer a {
     transition: all 0.5s ease;
 }
 footer a:hover {
     opacity: 0.5;
-}
-@media (max-width: 576px) {
-    footer {
-        flex-direction: column;
-    }
-    footer ul {
-        margin: 0;
-        justify-content: center;
-    }
 }
 
 /* Element exclusive */
@@ -673,7 +589,122 @@ hr {
     background-color: var(--accent1);
     max-width: 90%
 }
+
+/* Media Inquiries */
+@media (max-width: 1400px) {
+    .center {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .image img {
+        margin-left: 2rem;
+        width: 95%;
+        height: auto;
+        margin-right: 1rem;
+    }
+    .aboutMe .mainText {
+        margin-top: 1rem;;
+    }
+}
+@media (max-width: 1100px) {
+    .content {
+        flex-direction: column;
+    }
+    .yt {
+        margin:0 0 2rem 0;
+    }
+    .tci {
+        margin:0 0 2rem 0;
+    }
+    .website {
+        margin:0 0 2rem 0;
+    }
+    .venturesNote {
+        top: -9.5rem;          
+        left: 65%;
+        width: 8.25rem;
+    }
+}
+@media (max-width: 1000px) {
+    .center {
+        display: inline;
+    }
+    .works {
+        flex-direction: column;
+        display: block;
+    }
+    .leftTop img, .leftBottom img, .center img, .rightTop img {
+        display: block;
+        max-width: 60%;
+        margin: 0 auto 3.75rem auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer ul {
+        margin: 0;
+        justify-content: center;
+    }
+}
+@media (max-width: 925px) {
+    .headerNav > ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+}
+@media (max-width: 850px) {
+    .aboutMe article {
+        flex-direction: column;
+    }
+    .image img {
+        display: block;
+        justify-self: center;
+        margin: 0;
+        width: 70%;
+        height: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .aboutMe .mainText {
+        display: block;
+        align-self: center;
+        margin: 2rem 1rem 2rem 1rem;
+    }
+}
 @media (max-width: 576px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+    .chessboard {
+        order: 1;
+        max-width: 100%;
+        max-height: auto;
+        margin: 0;
+        display: block;
+    }
+    .heroText {
+        align-items: center;
+        order: 2;
+        margin: 1rem 0 10rem 1rem;
+    }
+    .image img {
+        width: 90%;
+    }
+    .quoteSection {
+        flex-direction: column;
+    }
+    .attribution {
+        margin: 0;
+    }
+    .leftTop img, .leftBottom img, .center img, .rightTop img {
+        max-width: 90%;
+    }
     .hr {
         margin: 1rem 0 1rem 0;
         padding: 0;
