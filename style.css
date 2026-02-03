@@ -82,6 +82,7 @@ body {
     font-size: 2.5rem;
     letter-spacing: 0.02em;
     color: var(--bg);
+    user-select: none;
 }
 .headerNav a {
     font-family: "Lato", sans-serif;
@@ -163,6 +164,7 @@ body {
 .heroText {
     order: 1;
     margin: 12.75rem 0 0 1.875rem;
+    user-select: none;
 }
 .heroText h1 {
     font-family: "Fjalla One", sans-serif;
@@ -170,6 +172,7 @@ body {
     font-size: 2.8125rem;
     font-weight: bold;
     line-height: 1.5;
+    user-select: none;
 }
 .heroText p{
     color: var(--text-light);
@@ -192,7 +195,7 @@ body {
 .buttonList a {
     font-size: 1rem;
 }
-.hero button:hover {
+.hero button:hover, .buttonList:focus-within button{
     background-color: var(--accent2);
     transform: scale(1.05);
 }
@@ -224,6 +227,7 @@ body {
     font-size: 2.1875rem;
     letter-spacing: 0.02em;
     margin: 0 0 1.25rem 0;
+    user-select: none;
 }
 .mainText p {
     color: var(--text-light);
@@ -249,6 +253,7 @@ body {
     padding-left: 1.25rem;
     border-left: 5px solid var(--accent1);
     color: var(--text);
+    user-select: none;
 }
 
 /* Quote Section */
@@ -264,6 +269,7 @@ body {
     text-align: center;
     margin-top: 9.375rem;
     padding-right: 3rem;
+    user-select: none;
 }
 .quoteSection q {
     padding-bottom: 0.625rem;
@@ -288,10 +294,12 @@ body {
     font-weight: bolder;
     font-size: 1.3rem;
     margin: 0.3125rem 0 0 0;
+    user-select: none;
 }
 .attributionText p {
     color: var(--text-light);
     margin: 0.7rem 0 43.75rem 0.0625rem;
+    user-select: none;
 }
 
 /* So I Did Section */
@@ -311,6 +319,7 @@ body {
     background-color: var(--text);
     font-size: clamp(4rem, 4vw + 1.5rem, 8rem);
     letter-spacing: 0.03em;
+    user-select: none;
 }
 
 /* Ventures Section */
@@ -437,14 +446,17 @@ body {
     grid-column: 3;
     grid-row: 1;
 }
+.rightText a {
+    text-decoration: none;
+    background: linear-gradient(45deg,var(--accent2),var(--accent1));
+    background-clip: text;
+    color: transparent;
+}
 .rightText h3 {
     font-family: 'BBH Hegarty', sans-serif;
     letter-spacing: 0.02em;
     font-size: 3.1rem;
     margin: 0 1rem 0 1rem;
-    background: linear-gradient(45deg,var(--accent2),var(--accent1));
-    background-clip: text;
-    color: transparent;
     text-align: center;
     transition: all 0.4s ease;
 }
@@ -470,6 +482,7 @@ body {
     padding-left: 0.5rem;
     border-left: 5px solid var(--accent2);
     color: var(--text);
+    user-select: none;
 }
 
 /* Contact Me Section */
@@ -488,6 +501,7 @@ body {
     font-weight: lighter;
     margin: 1.25rem 0 0.625rem 0;
     font-size: 2.1875rem;
+    user-select: none;
 }
 .contactForm button {
     border: none;
@@ -517,6 +531,9 @@ body {
     font-weight: bold;
     color: var(--text);
 }
+.contactForm:focus-within button {
+    box-shadow: 0px 0px 15px var(--accent2);
+}
 .contactForm .message {
     height: 3.125rem;
     border: 3px solid var(--accent1);
@@ -541,9 +558,11 @@ footer h3 {
     letter-spacing: 0.04em;
     color: var(--accent1);
     font-size: 2.185rem;
+    user-select: none;
 }
 .copyright {
     margin-left: 2.5rem;
+    user-select: none;
 }
 .footerNav, .links{
     list-style: none;
@@ -578,6 +597,7 @@ h2 {
     background-color: var(--accent1);
     border-radius: var(--radius);
     padding: 0 0.5rem 0 0.5rem;
+    user-select: none;
 }
 p {
     font-family: "Lato", sans-serif;
