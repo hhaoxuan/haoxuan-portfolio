@@ -288,18 +288,29 @@ body {
 /* Projects Section */
 .mainSection {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     min-height: 100vh; 
     justify-content: center;
-    align-content: center;
+}
+.mainSection h4 {
+    font-family: "BBH Hegarty", sans-serif;
+    color: var(--accent2);
+    font-weight: lighter;
+    font-size: 2rem;
+    letter-spacing: 0.01rem;
+    text-shadow: 0.25rem 0.25rem 0.15rem var(--bg2);
+    margin: 0.5rem 0 0 0;
 }
 .storySection, .squareSectionOne, .squareSectionTwo {
     margin: 0;
     text-align: center;
 }
+.storySection {
+    margin-left: 0.5rem;
+}
 .storySection img, .squareSectionOne img, .squareSectionTwo img {
     border-radius: 1rem;
-    max-width: 22rem;
+    max-width: 23rem;
     height: auto;
     margin: 0;
     align-content: center;
@@ -307,6 +318,14 @@ body {
 .storySection img {
     max-width: 27rem;
     height: auto;
+}
+.storySection h3, .squareSectionOne h3, .squareSectionTwo h3{
+    font-weight: lighter;
+    font-size: 2.8rem;
+    color: var(--accent1);
+}
+.storySection p, .squareSectionOne p, .squareSectionTwo p {
+    margin-bottom: 2rem;
 }
 
 /* Contact Me Section */
