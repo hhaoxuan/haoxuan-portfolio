@@ -144,6 +144,9 @@ body {
 }
 
 /* Hero Section */
+#heroSection {
+    scroll-margin-top: 11.75rem;
+}
 #heroSection img {
     max-width: 100vw;
     height: auto + 100rem;
@@ -177,9 +180,6 @@ body {
     border-radius: var(--radius);
     box-shadow: 1rem 1rem 1.5rem var(--bg);
     margin-top: -2rem;
-    transition: all 0.3s ease;
-}
-.heroButtons a {
     text-decoration: none;
     font-family: "BBH Hegarty", sans-serif;
     color: var(--text);
@@ -187,16 +187,20 @@ body {
     letter-spacing: 0.05rem;
     transition: all 0.3s ease;
 }
-.heroButtons button:hover {
+.heroButtons a {
+    transition: all 0.3s ease;
+}
+.heroButtons a:hover button{
     transform: scale(1.03);
 }
-.heroButtons button:hover a, .heroButtons:focus-within a{
+.heroButtons a:hover button {
     color: var(--text-light);
     text-shadow: 0 0 0.25rem var(--text);
 }
 
 /* About Section */
 #aboutSection {
+    scroll-margin-top: 4rem;
     margin-top: 15rem;
 }
 #aboutSection img {
@@ -239,7 +243,7 @@ body {
 
 /* Impact Section */
 #impactSection {
-    scroll-margin-top: 7.75rem;
+    scroll-margin-top: 5rem;
 }
 .mainStats {
     display: flex;
@@ -286,6 +290,9 @@ body {
 }
 
 /* Projects Section */
+#projectsSection {
+    scroll-margin-top: 4.5rem;
+}
 .mainSection {
     display: flex;
     gap: 1rem;

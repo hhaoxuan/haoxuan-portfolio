@@ -184,18 +184,18 @@ body {
 }
 .buttonList button {
     margin-top: 0.625rem;
-    padding: 0.625rem;
+    padding: 0.75rem;
     border-radius: var(--radius);
     border: none;
     font-weight: bolder;
     background-color: var(--accent1);
     text-align: center;
+    font-size: 1rem;
+    color: var(--bg);
+    letter-spacing: 0.01rem;
     transition: all 0.3s ease;
 }
-.buttonList a {
-    font-size: 1rem;
-}
-.hero button:hover, .buttonList:focus-within button{
+.buttonList a:hover button {
     background-color: var(--accent2);
     transform: scale(1.05);
 }
