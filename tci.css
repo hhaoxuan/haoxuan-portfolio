@@ -159,13 +159,12 @@ body {
 }
 #heroSection h1 {
     color: var(--accent1);
-    justify-self: flex-end;
     font-family: "BBH Hegarty", sans-serif;
-    font-size: clamp(2rem, 10vw, 10rem);
+    font-size: clamp(4.25rem, 10vw, 8.5rem);
     text-align: center;
-    letter-spacing: 0.5rem;
+    letter-spacing: clamp(0.2rem,0.5vw,0.5rem);
     text-shadow: 1rem 1rem 1.5rem var(--bg);
-    margin-top: 8.5rem;
+    margin-top: clamp(2rem,10vw + 0.5rem,9rem);
     user-select: none;
 }
 .heroButtons {
@@ -176,14 +175,14 @@ body {
 .heroButtons button {
     border: transparent;
     background-color: var(--accent1);
-    padding: 1rem;
+    padding: clamp(0.5rem,1vw,2rem);
     border-radius: var(--radius);
     box-shadow: 1rem 1rem 1.5rem var(--bg);
     margin-top: -2rem;
     text-decoration: none;
     font-family: "BBH Hegarty", sans-serif;
     color: var(--text);
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem,3vw,2rem);
     letter-spacing: 0.05rem;
     transition: all 0.3s ease;
 }
@@ -204,7 +203,7 @@ body {
     margin-top: 15rem;
 }
 #aboutSection img {
-    max-height: 40rem;
+    max-height: clamp(30rem, 18vw + 5rem, 70rem);
     width: auto;
     border-radius: 1.5rem;
 }
@@ -232,7 +231,6 @@ body {
 }
 .paragraphGroup h3 {
     color: var(--accent1);
-    align-self: right;
     justify-self: right;
     text-align: right;
 }
@@ -307,6 +305,7 @@ body {
     letter-spacing: 0.01rem;
     text-shadow: 0.25rem 0.25rem 0.15rem var(--bg2);
     margin: 0.5rem 0 0 0;
+    user-select: none;
 }
 .storySection, .squareSectionOne, .squareSectionTwo {
     margin: 0;
@@ -330,6 +329,7 @@ body {
     font-weight: lighter;
     font-size: 2.8rem;
     color: var(--accent1);
+    user-select: none;
 }
 .storySection p, .squareSectionOne p, .squareSectionTwo p {
     margin-bottom: 2rem;
@@ -468,6 +468,55 @@ hr {
     max-width: 90%
 }
 
+/* A LOTTTTT of Media Inquiries */
+@media (max-width: 1300px) {
+    .mainSection {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1100px) {
+    #heroSection img {
+        margin-top: -10rem;
+    }
+    #aboutSection {
+        margin-top: 11.5rem;
+    }
+}
+@media (max-width: 1000px) {
+    footer {
+        flex-direction: column;
+    }
+    footer ul {
+        margin: 0;
+        justify-content: center;
+    }
+    .mainStats {
+        gap: 8rem;
+    }
+}
+@media (max-width: 960px) {
+    #aboutSection {
+        margin-top: 10rem;
+    }
+    .aboutClass {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .imgGroup {
+        margin: 0.5rem auto;
+        justify-content: center;
+    }
+    .paragraphGroup h3 {
+        justify-self: center;
+        text-align: center;
+    }
+    .paragraphGroup p {
+        text-align: center;
+        justify-self: center;
+        margin-left: 0.45rem;
+        margin-right: 0;
+    }
+}
 @media (max-width: 925px) {
     .headerNav > ul {
         display: none;
@@ -475,5 +524,58 @@ hr {
     .hamburger {
         display: block;
         margin-left: auto;
+    }
+}
+@media (max-width: 900px) {
+    #heroSection img {
+        margin-top: -9rem;
+    }
+}
+@media (max-width: 750px) {
+    #heroSection img {
+        margin-top: -7rem;
+    }
+    #aboutSection {
+        margin-top: 8rem;
+    }
+}
+@media (max-width: 700px) {
+    .mainStats {
+        gap: 6rem;
+    }
+    .mainStats h3{
+        font-size: 1.1rem;
+        letter-spacing: 0.01rem;
+        line-height: 1.7;
+    }
+    .bigNumber, .bigEvents{
+        font-size: 2.75rem;
+    }
+    .impressionsClass:hover, .eventsClass:hover{
+        transform: scale(1.04);
+        box-shadow: 0 0 1.5rem var(--accent1);
+    }
+    .impressionsClass:hover .bigNumber, .eventsClass:hover .bigEvents{
+        text-shadow: 0 0 0.3rem var(--text);
+    }
+}
+@media (max-width: 600px) {
+    #heroSection img {
+        margin-top: -5rem;
+    }
+    #heroSection h1 {
+        margin-top: 1.5rem;
+        font-weight: lighter;
+    }
+    #aboutSection {
+        margin-top: 5rem;
+    }
+}
+@media (max-width: 576px) {
+    #heroSection img {
+        margin-top: -3rem;
+    }
+    #heroSection h1 {
+        margin-top: 1rem;
     }
 }
