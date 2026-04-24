@@ -30,8 +30,9 @@
     <meta name="twitter:image" content="images/hero_image.png">
 </head>
 <body>
+    <script src = "script.js" defer></script>
 
-    <!-- Desktop nav bar -->
+<!-- Desktop nav bar -->
     <section class = "navigation" aria-label = "Main Navgiation For Desktop">
     <nav class = "headerNav">
         <header><h1>Haoxuan's Portfolio</h1></header>
@@ -42,7 +43,7 @@
             <li><a href = "#contactMe">Contact</a></li>
         </ul>
 
-    <!-- Mobile nav bar -->
+<!-- Mobile nav bar -->
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger">☰</label>
         <div class = "mobileNav" aria-label = "Main Navgiation For Mobile">
@@ -57,8 +58,8 @@
     </section>
     <main>
 
-    <!-- Hero Section -->
-    <div id = "hero">
+<!-- Hero Section -->
+    <div id = "hero" class = "fade-in">
      <section class = "hero">
         <div class = "chessboard">
             <img src = "images/hero_image.png" alt = "orange chess board graphic">
@@ -74,8 +75,8 @@
      </section>
     </div>
 
-    <!-- About Me Section -->
-    <section id = "aboutMe">
+<!-- About Me Section -->
+    <section id = "aboutMe" class = "fade-in">
         <h2>About Me</h2>
         <div class = "aboutMe">
             <article>
@@ -103,8 +104,8 @@
     </section>
     </main>
 
-    <!-- Quote -->
-    <div id = "quoteSection">
+<!-- Quote -->
+    <div id = "quoteSection" class = "fade-in">
         <section class = "quoteSection">
             <h2><q> Screw it, let's do it. </q></h2>
             <article class = "attribution">
@@ -117,13 +118,13 @@
         </section>
     </div>
 
-    <!-- So I did -->
-    <div id = "attentionGrabber">
+<!-- So I did -->
+    <div id = "attentionGrabber" class = "fade-in">
         <scan class = "attentionGrabber"><h2>...So I Did</h2></scan>
     </div>
 
-    <!-- Ventures Section -->
-    <section id = "ventures">
+<!-- Ventures Section -->
+    <section id = "ventures" class = "fade-in">
         <scan class = "venturesh2"> <h2>Ventures</h2> </scan>
         <div class = "content">
         <img src = "images/sticky_note.png" class = "venturesNote" alt = "note">
@@ -174,8 +175,8 @@
         </div>
     </section>
 
-    <!-- Works Section -->
-    <section id = "works">
+<!-- Works Section -->
+    <section id = "works" class = "fade-in">
         <span class = "yellowYay"><h2>Works</h2></span>
         <section class = "works">
             <div class = "left">
@@ -207,9 +208,9 @@
         </section>
     </section>
     
-    <!-- Contact Me Section -->
+<!-- Contact Me Section -->
     <hr>
-    <section id = "contactMe">
+    <section id = "contactMe" class = "fade-in">
         <h2> Contact Me </h2>
         <form class = "contactForm" action="https://formspree.io/f/xykynrrw" method="POST">
             <h3>Email</h3>
@@ -223,8 +224,8 @@
     </section>
     <hr>
 
-    <!-- Footer -->
-    <footer id = "footerElement">
+<!-- Footer -->
+    <footer id = "footerElement" class = "fade-in">
         <div class = "copyright">
             <h3>Copyright</h3>
             <p>© 2026 Haoxuan — Portfolio</p>

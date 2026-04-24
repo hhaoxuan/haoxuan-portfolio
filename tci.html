@@ -30,7 +30,7 @@
     <meta name="twitter:image" content="images/tci_logo.png">
 </head>
 <body>
-
+    <script src = "tci.js" defer></script>
 <!-- Desktop nav bar -->
     <section class = "navigation" aria-label = "Main Navgiation For Desktop">
     <nav class = "headerNav">
@@ -67,7 +67,7 @@
 </section>
 
 <!-- About Section -->
-<section id = "aboutSection">
+<section id = "aboutSection" class = "fade-in">
     <h2>About</h2>
     <article class = "aboutClass">
         <div class = "imgGroup">
@@ -83,23 +83,25 @@
                 From there, the TCI team built this organization from the<br>
                 ground up.</p>
             <h3>Our Mission</h3>
-            <p>Our primary mission is to spread the love of chess around<br>
-                the San Gabriel Valley.  Growing up, I loved playing chess and<br>
-                everything associated with it.  I want my community to love<br>
-                the game as much as I do.  We attempt to achieve this<br>
-                through frequent posts and in-person tournaments.</p>
+            <p>Our primary mission is to spread the love of chess in<br>
+                the San Gabriel Valley.  Growing up, I loved playing<br>
+                chess around and everything associated with it.  I<br>
+                want my community to love the game as much as I do.<br>
+                We attempt to achieve this through frequent posts<br>
+                and in-person tournaments.</p>
             <h3>Personal Ventures</h3>
-            <p><i>The Chess Initiative</i> has been a tremendous aid to my skill set.<br>
-                It has inspired me to take on an active leadership role,<br>
-                coordinating with other founders to accomplish our <br>
-                mission.  I have polished my skills in communication, graphic<br>
-                design, and video editing from these experiences.</p>
+            <p><i>The Chess Initiative</i> has been a tremendous aid<br>
+                to my skill set.  It has inspired me to take on an<br>
+                active leadership role, coordinating with other<br>
+                founders to accomplish our  mission.  I have polished<br>
+                my skills in communication,graphic design, and video<br>
+                editing from these experiences.</p>
         </div>
     </article>
 </section>
 
 <!-- Impact Section -->
-<section id = "impactSection">
+<section id = "impactSection" class = "fade-in">
     <h2>Impact</h2>
     <article class = "mainStats">
         <div class = "impressionsClass">
@@ -120,7 +122,7 @@
 </section>
 
 <!-- Projects Section -->
-<section id = "projectsSection">
+<section id = "projectsSection" class = "fade-in">
     <h2>Projects</h2>
     <article class = "mainSection">
         <div class = "storySection">
@@ -176,10 +178,61 @@
     </article>
 </section>
 
+<!-- Events Hosted Section -->
+<section id = "eventsHosted" class = "fade-in">
+    <h2>Events Hosted</h2>
+    <article class = "indivEvents">
+        <h3>2025 Thanksgiving Interscholastic Tournament</h3>
+        <h4>Almansor Park (Venue) • 30 Players (Attendance) • Brandon Cong (Winner)</h4>
+        <div class = "needsFlex">
+            <img src = "images/tci_thanksgiving_tournament_photo.webp" alt = "thanksgiving tournament photo">
+            <p>This was our first interscholastic tournament with Arcadia,<br>
+                Mark Keppel, Alhambra, and Schurr High School (local schools<br>
+                in the San Gabriel Valley).  By coordinating with these high<br>
+                school&apos;s club presidents, I gained a newfound appreciation<br>
+                for event management and planning.  We used google sheets for<br>
+                tracking and pairing the tournament, which could be streamlined<br>
+                later on.  The graphic for promoting this event was done by me<br>
+                (Thanksgiving Graphic).</p>
+        </div>
+    </article>
+    <article class = "indivEvents">
+        <h3>2026 February Open</h3>
+        <h4>Almansor Park • 10 Players • Haoxuan Huang</h4>
+        <div class = "needsFlex">
+            <img src = "images/tci_february_open_photo.webp" alt = "february open photo">
+            <p>This was TCI&apos;s third interscholastic tournament with Arcadia,<br>
+                Mark Keppel, Alhambra, and Schurr High School.  We were<br>
+                gradually seeing the number of attendees decrease, and knew<br>
+                that we had to differentiate in order to achieve our mission.<br>
+                This tournament had a decent turnout, but we plan on hosting<br>
+                more tournaments outside of the high school “coalition” we&apos;ve<br>
+                created.  The <a href = "https://www.instagram.com/p/DUpAJHMkeZf/" target = "_blank" 
+                rel="noopener noreferrer">promotional graphic</a> was made by me.</p>
+        </div>
+    </article>
+    <article class = "indivEvents">
+        <h3>2026 Spring Workshop & Tournament</h3>
+        <h4>The Dream School House • 28 Kids Total • 5 Placements</h4>
+        <div class = "needsFlex">
+            <img src = "images/tci_award_spring_photo.webp" alt = "spring tournament awards photo">
+            <p>This event originally stemmed from an outreach message I sent<br>
+                in mid-December 2025.  Upon interest in the event from<br>
+                TheDreamSchoolHouse, we scheduled and created the workshop<br>
+                along with the tournament from scratch, enlisting help from<br>
+                Mark Keppel High School for managing the physical events.<br>
+                This was our first event in collaboration with an organization<br>
+                outside the local high schools.  <a href = "https://www.instagram.com/p/DVcgjjWEZ6C/" target = "_blank" 
+                rel="noopener noreferrer">Promotion graphics</a> were<br>
+                created by me.</p>
+        </div>
+    </article>
+</section>
+
 <!-- Contact Me Section -->
     <hr>
-    <section id = "contactMe">
-        <h2> Contact Me </h2>
+    <section id = "contactMe" class = "fade-in">
+        <h2>Contact Me</h2>
         <form class = "contactForm" action="https://formspree.io/f/xykynrrw" method="POST">
             <h3>Email</h3>
             <input type = "email" name = "email" required autocomplete="email">
@@ -193,7 +246,7 @@
     <hr>
 
 <!-- Footer -->
-    <footer id = "footerElement">
+    <footer id = "footerElement" class = "fade-in">
         <div class = "copyright">
             <h3>Copyright</h3>
             <p>© 2026 Haoxuan — Portfolio</p>
@@ -206,6 +259,7 @@
             <li><a href = "#aboutSection">About</a></li>
             <li><a href = "#impactSection">Impact</a></li>
             <li><a href = "#projectsSection">Projects</a></li>
+            <li><a href = "#eventsHosted">Events</a></li>
             <li><a href = "#contactMe">Contact</a></li>
         </ul>
         <ul class = "links">

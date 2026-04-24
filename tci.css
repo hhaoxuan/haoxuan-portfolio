@@ -51,7 +51,18 @@ body {
   font-style: normal;
 }
 
-/* Desktop nav bar */
+/* Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Desktop Navigation Bar */
 .navigation {
     position: sticky;
     top: 0;
@@ -97,7 +108,7 @@ body {
     opacity: 0.5;
 }
 
-/* Mobile nav bar */
+/* Mobile Navigation Bar */
 #menu-toggle {
     display: none;
 }
@@ -203,7 +214,7 @@ body {
     margin-top: 15rem;
 }
 #aboutSection img {
-    max-height: clamp(30rem, 18vw + 5rem, 70rem);
+    max-height: clamp(30rem, 20vw + 20rem, 40rem);
     width: auto;
     border-radius: 1.5rem;
     transition: all 0.4s ease;
@@ -353,6 +364,60 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Events Hosted Section */
+#eventsHosted {
+    scroll-margin-top: 3rem;
+}
+#eventsHosted h2{
+    margin-bottom: 2.25rem;
+}
+#eventsHosted h3 {
+    font-weight: lighter;
+    font-size: 2.8rem;
+    color: var(--accent1);
+    transition: all 0.4s ease;
+    user-select: none;
+    margin-bottom: 0;
+}
+#eventsHosted h4 {
+    font-size: 1.9rem;
+    color: var(--accent2);
+    transition: all 0.4s ease;
+    user-select: none;
+    margin-top: 0.75rem;
+}
+#eventsHosted h3:hover {
+    text-shadow: 0 0 1rem var(--accent1); 
+}
+.indivEvents {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.indivEvents p{
+    font-weight: bolder;
+    font-size: 1.3rem;
+    line-height: 1.9;
+    letter-spacing: 0.02rem;
+}
+.indivEvents a {
+    text-decoration: none;
+    color: var(--accent1);
+}
+.needsFlex {
+    display: flex;
+    gap: 4rem;
+}
+.needsFlex img {
+    max-width: 25rem;
+    max-height: 25rem;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 5px 1px rgb(19, 19, 19);
+    transition: all 0.4s ease;
+}
+.needsFlex img:hover {
+    transform: scale(1.04);
+}
+
 /* Contact Me Section */
 #contactMe {
   scroll-margin-top: 7.75rem;
@@ -472,6 +537,9 @@ h3 {
     font-family: "BBH Hegarty", sans-serif;
     color: var(--text);
 }
+h4 {
+    font-family: "Fjalla One", sans-serif;
+}
 p {
     font-family: "Lato", sans-serif;
     color: var(--text);
@@ -490,6 +558,10 @@ hr {
 @media (max-width: 1300px) {
     .mainSection {
         flex-wrap: wrap;
+    }
+    .needsFlex {
+    flex-direction: column;
+    gap: 1.5rem;
     }
 }
 @media (max-width: 1100px) {
@@ -527,12 +599,16 @@ hr {
     .paragraphGroup h3 {
         justify-self: center;
         text-align: center;
+        margin-left: 1.6rem;
     }
     .paragraphGroup p {
         text-align: center;
         justify-self: center;
-        margin-left: 0.45rem;
+        margin-left: 1.6rem;
         margin-right: 0;
+    }
+    .indivEvents p{
+    font-size: 1.2rem;
     }
 }
 @media (max-width: 925px) {
